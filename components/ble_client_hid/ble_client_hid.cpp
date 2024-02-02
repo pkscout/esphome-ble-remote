@@ -204,7 +204,6 @@ void BLEClientHID::send_input_report_event(esp_ble_gattc_cb_param_t *p_data){
     if(this->last_event_value_sensor != nullptr){
       this->last_event_value_sensor->publish_state(value.value);
     }
-    %" PRIu32 ""
     ESP_LOGD(TAG, "Send HID event to HomeAssistant: usage: %s, value: %" PRIu32 "", usage.c_str(), value.value);
   }
   
